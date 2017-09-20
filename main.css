@@ -38,7 +38,7 @@ h1 {
 .btn-finish {
 	background-color: #3cb281;
 	color: #ffffff;
-	margin-top:15px;
+	margin:15px 0;
 	display:block;
 
 }
@@ -55,8 +55,8 @@ h1 {
 }
 
 .header {
-	width:100%;
-	margin:0 20px;
+	width:90%;
+	margin:auto;
 }
 
 .header-controls {
@@ -75,67 +75,219 @@ h1 {
 	margin-top:10px;
 }
 
+/*Table*/
+.enlistment-body{
+	padding: 0 10%;
+	overflow-x: auto;
+	margin-bottom: 100px;
+}
+
+.sortable{
+	width:100%;
+	background-color: #ffffff;
+	border-radius: 4px;
+	overflow-x: auto;
+}
+
+td {
+	padding:25px;
+	text-align: left;
+}
+
+th {
+	padding:25px;
+	text-align: left;
+	background: #ffffff;
+	color: #6f7b8b;
+	font-weight: bold;
+}
+
+tr:nth-child(odd) {
+	background: #f8feff;
+}
+
+.btn-error {
+	font-weight: bold;
+	color: #cb3838;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.btn-enlisted {
+	font-weight: bold;
+	color: #4ccd73;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
 /*Footer*/
 
 .enlist-summary {
-	position: fixed;
-	bottom:0;
 	width:100%;
-	padding:50px 0;
+	position: fixed;
+	bottom:0%;
 	background-color: #33415b;
 }
 
-.enlist-summary h1 {
+.enlist-desc h1 {
 	color: #ffffff;
 }
 
-.enlist-container {
-	display: flex;
+#enlist-container {
+	display: none;
 	flex-direction: column;
+	width: 90%;
+	margin:auto;
+	padding-bottom: 50px;
+    -webkit-transition:all 1s ease;
+    -moz-transition:all 1s ease;
+}
+
+.enlist-desc {
+	height:80%;
+	width: 90%;
+	background-color: transparent;
+	color:#ffffff;
 }
 
 .empty-class {
 	height:80%;
 	background-color: #d8d8d8;
+	line-height: 150px;
 	text-align: center;
 	vertical-align: middle;
-	line-height: 150px;
 	font-weight: bold;
+	padding:0 16px;
 }
 
-
-.enlist-desc {
+.enlisted-class {
 	height:80%;
-	background-color: transparent;
-	color:#ffffff;
+	background-color: #ffffff;
+	color: #33415b;
+	font-size: 14px;
+	padding:16px;
+	margin-bottom:10px;
+}
+
+.enlisted-class h2 {
+	font-size: 18px;
+	margin-top: 0;
+}
+
+.enlisted-class a {
+	display: block;
+	margin-top:10px;
+	text-align: right;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ca3838;
+}
+
+.enlisted-class a:hover {
+	text-decoration: underline;
+}
+
+.toggle-container {
+	text-align: right;
+	vertical-align: center;
+	padding-right: 25px;
+	padding:0 10%;
+}
+
+#summary-title {
+	display: block;
+	padding-top: 10px;
+	color: #ffffff;
+	float:left;
+	font-size: 20px;
+	font-weight: bold;
+	margin:0;
 }
 
 
-@media all and (min-width: 425px) {
+#btn-toggle {
+	display: inline-block;
+	color:white;
+	font-size: 40px;
+	transform: rotate(90deg);
+}
+
+@media all and (min-width: 426px) {
 	.main-container {
 		width:80%;
 		margin:auto;
 		vertical-align: center;
 	}
 
-	.enlist-container {
+	#enlist-container {
 		width:80%;
-		height:100%;
 		margin:auto;
 		align-items: center;
 		justify-content: center;
-		flex-direction: row;
+		flex-direction: column;
 	}
 
-	.empty-class,
 	.enlist-desc {
-		width:31%;
+		width:100%;
 		margin:1%;
-		float:top;
+	}
+
+	.class-list {
+		display: flex;
+		width:100%;
+	}
+
+	.empty-class{
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		min-height:150px;
+		width:50%;
+		margin:1%;
+	}
+
+	.enlisted-class {
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height:150px;
+		width:50%;
+		margin:1%;
+
+		padding:0 16px;
 	}
 }
 
-@media all and (min-width: 1096px){
+@media all and (min-width: 768px){
+	#enlist-container {
+		flex-direction: row;
+	}
+
+	.enlist-desc {
+		width:31%;
+	}
+
+	.class-list {
+		width: 61%;
+	}
+
+	#enlist-container {
+		display:flex;
+	}
+
+	#summary-title {
+		display:none;
+	}
+
+	#btn-toggle {
+		transform: rotate(-90deg);
+	}
+
+}
+
+@media all and (min-width: 1096px) {
 	.header {
 		display:inline-block;
 		width:auto;
@@ -146,5 +298,4 @@ h1 {
 		float: right;
 		width:auto;
 	}
-
 }
