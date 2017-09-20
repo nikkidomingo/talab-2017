@@ -90,7 +90,7 @@ h1 {
 }
 
 td {
-	padding:25px;
+	padding:10px;
 	text-align: left;
 }
 
@@ -104,6 +104,10 @@ th {
 
 tr:nth-child(odd) {
 	background: #f8feff;
+}
+
+td:last-child { 
+	text-align: center;
 }
 
 .btn-error {
@@ -138,7 +142,7 @@ tr:nth-child(odd) {
 	flex-direction: column;
 	width: 90%;
 	margin:auto;
-	padding-bottom: 50px;
+	padding-top: 50px;
     -webkit-transition:all 1s ease;
     -moz-transition:all 1s ease;
 }
@@ -285,6 +289,9 @@ tr:nth-child(odd) {
 		transform: rotate(-90deg);
 	}
 
+	td {
+		padding:25px;
+	}
 }
 
 @media all and (min-width: 1096px) {
