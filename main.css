@@ -21,22 +21,31 @@ h1 {
 
 /*Buttons*/
 .btn {
-	width: 112px;
-	height: 35px;
+	padding:10px 20px;
 	font-weight: bold;
 	letter-spacing: 0.2px;
 	text-align: center;
 	text-transform: uppercase;
 	color: #314467;
 	background-color: #ffffff;
-}
-
-.btn-logout {
-	border: solid 1px #ffffff;
+	border:none;
 }
 
 .btn-enlist {
 	border: solid 1px #e2ebed;
+}
+
+.btn-finish {
+	background-color: #3cb281;
+	color: #ffffff;
+	margin-top:15px;
+	display:block;
+
+}
+
+.btn-finish:disabled{
+	background-color: #d9d9d9;
+	color: #595959;
 }
 
 /*Header*/
@@ -68,28 +77,35 @@ h1 {
 
 /*Footer*/
 
-.enlistment-summary {
+.enlist-summary {
 	position: fixed;
 	bottom:0;
 	width:100%;
-	height: 233px;
+	padding:50px 0;
 	background-color: #33415b;
 }
 
-.enlistment-summary h1 {
+.enlist-summary h1 {
 	color: #ffffff;
 }
 
+.enlist-container {
+	display: flex;
+	flex-direction: column;
+}
+
 .empty-class {
-	display: inline-block;
-	height:150px;
+	height:80%;
 	background-color: #d8d8d8;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 150px;
+	font-weight: bold;
 }
 
 
-.enlistment-desc {
-	display: inline-block;
-	height:150px;
+.enlist-desc {
+	height:80%;
 	background-color: transparent;
 	color:#ffffff;
 }
@@ -100,6 +116,22 @@ h1 {
 		width:80%;
 		margin:auto;
 		vertical-align: center;
+	}
+
+	.enlist-container {
+		width:80%;
+		height:100%;
+		margin:auto;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+	}
+
+	.empty-class,
+	.enlist-desc {
+		width:31%;
+		margin:1%;
+		float:top;
 	}
 }
 
@@ -113,13 +145,6 @@ h1 {
 		display: inline-block;
 		float: right;
 		width:auto;
-	}
-
-	.empty-class,
-	.enlistment-desc {
-		width:31%;
-		margin:1px;
-		float:top;
 	}
 
 }
