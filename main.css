@@ -9,20 +9,24 @@ body {
 	background-color: #e2ebed;
 	font-family: 'Roboto', sans-serif;
 	color: #314467;
+	font-size: 14px;
 }
 
 h1 {
 	line-height: 1;
 	margin:0;
+	font-size: 21.5px;
 	margin-bottom: 10px;
-	letter-spacing: 0.2px;
+	line-height: 1.16;
 	color: #314467;
+	font-weight: 700;
 }
 
 /*Buttons*/
 .btn {
 	padding:10px 20px;
-	font-weight: bold;
+	font-weight: 700;
+	font-size: 12px;
 	letter-spacing: 0.2px;
 	text-align: center;
 	text-transform: uppercase;
@@ -77,15 +81,16 @@ h1 {
 
 /*Table*/
 .enlistment-body{
-	padding: 0 10%;
+	padding-right: 10px;
+	padding-left: 10px;
 	overflow-x: auto;
-	margin-bottom: 100px;
 }
 
 .sortable{
 	width:100%;
 	background-color: #ffffff;
 	border-radius: 4px;
+	font-size: 12px;
 	overflow-x: auto;
 }
 
@@ -95,7 +100,7 @@ td {
 }
 
 th {
-	padding:25px;
+	padding:25px 10px;
 	text-align: left;
 	background: #ffffff;
 	color: #6f7b8b;
@@ -106,22 +111,25 @@ tr:nth-child(odd) {
 	background: #f8feff;
 }
 
-td:last-child { 
+td:last-child,
+td:first-child,
+th:first-child  { 
 	text-align: center;
+	padding:25px 20px;
 }
 
 .btn-error {
 	font-weight: bold;
 	color: #cb3838;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 .btn-enlisted {
 	font-weight: bold;
 	color: #4ccd73;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 /*Footer*/
@@ -135,6 +143,7 @@ td:last-child {
 
 .enlist-desc h1 {
 	color: #ffffff;
+	font-size: 20px;
 }
 
 #enlist-container {
@@ -174,7 +183,7 @@ td:last-child {
 }
 
 .enlisted-class h2 {
-	font-size: 18px;
+	font-size: 14px;
 	margin-top: 0;
 }
 
@@ -184,7 +193,7 @@ td:last-child {
 	text-align: right;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: bold;
 	color: #ca3838;
 }
@@ -205,7 +214,7 @@ td:last-child {
 	padding-top: 10px;
 	color: #ffffff;
 	float:left;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: bold;
 	margin:0;
 }
@@ -262,6 +271,10 @@ td:last-child {
 
 		padding:0 16px;
 	}
+
+	.enlistment-body {
+		padding: 0 10%;
+	}
 }
 
 @media all and (min-width: 768px){
@@ -290,11 +303,11 @@ td:last-child {
 	}
 
 	td {
-		padding:25px;
+		padding:15px 10px;
 	}
 }
 
-@media all and (min-width: 1096px) {
+@media all and (min-width: 1024px) {
 	.header {
 		display:inline-block;
 		width:auto;
@@ -304,5 +317,6 @@ td:last-child {
 		display: inline-block;
 		float: right;
 		width:auto;
+		padding-top: 0px;
 	}
 }
