@@ -10,8 +10,8 @@
         <script src="sorttable.js"></script>
     </head>
     <body>
-    	<div class="main-container">
-	    	<div class="header">
+    	<div class="header-container">
+	    	<div class="header-title">
 				<h1>Hi Nikki, enlist in a TALAB class.</h1>
 				You are required to enilst in 4 hours worth of classes.
 			</div>
@@ -28,7 +28,7 @@
 		</div>
 
 		<div class="enlistment-body">
-			<table class="sortable">
+			<table id="table" class="sortable">
 				<tr>
 					<th>SDG</th>
 					<th>Topic</th>
@@ -49,7 +49,7 @@
 					<td>8:00-10:00 AM</td>
 					<td>Faura 105</td>
 					<td>0</td>
-					<td class="btn-error">Class Full</td>
+					<td class="msg-error">Class Full</td>
 				</tr>
 				<tr>
 					<td>SDG5</td>
@@ -60,7 +60,7 @@
 					<td>8:00-10:00 AM</td>
 					<td>CTC 201</td>
 					<td>32</td>
-					<td class="btn-enlisted">&#10003; Enlisted</td>
+					<td class="msg-enlisted">&#10003; Enlisted</td>
 				</tr>
 				<tr>
 					<td>SDG5</td>
@@ -71,7 +71,7 @@
 					<td>8:00-10:00 AM</td>
 					<td>SOM 205</td>
 					<td>0</td>
-					<td class="btn-error">Conflict</td>
+					<td class="msg-error">Conflict</td>
 				</tr>
 				<tr>
 					<td>SDG2</td>
@@ -93,7 +93,7 @@
 					<td>8:00-10:00 AM</td>
 					<td>Faura 105</td>
 					<td>0</td>
-					<td class="btn-error">Class Full</td>
+					<td class="msg-error">Class Full</td>
 				</tr>
 				<tr>
 					<td>SDG5</td>
@@ -104,7 +104,7 @@
 					<td>8:00-10:00 AM</td>
 					<td>CTC 201</td>
 					<td>32</td>
-					<td class="btn-enlisted">&#10003; Enlisted</td>
+					<td class="msg-enlisted">&#10003; Enlisted</td>
 				</tr>
 				<tr>
 					<td>SDG5</td>
@@ -115,7 +115,7 @@
 					<td>8:00-10:00 AM</td>
 					<td>SOM 205</td>
 					<td>0</td>
-					<td class="btn-error">Conflict</td>
+					<td class="msg-error">Conflict</td>
 				</tr>
 				<tr>
 					<td>SDG2</td>
@@ -137,7 +137,7 @@
 					<td>8:00-10:00 AM</td>
 					<td>Faura 105</td>
 					<td>0</td>
-					<td class="btn-error">Class Full</td>
+					<td class="msg-error">Class Full</td>
 				</tr>
 				<tr>
 					<td>SDG5</td>
@@ -148,7 +148,7 @@
 					<td>8:00-10:00 AM</td>
 					<td>CTC 201</td>
 					<td>32</td>
-					<td class="btn-enlisted">&#10003; Enlisted</td>
+					<td class="msg-enlisted">&#10003; Enlisted</td>
 				</tr>
 				<tr>
 					<td>SDG5</td>
@@ -159,7 +159,7 @@
 					<td>8:00-10:00 AM</td>
 					<td>SOM 205</td>
 					<td>0</td>
-					<td class="btn-error">Conflict</td>
+					<td class="msg-error">Conflict</td>
 				</tr>
 				<tr>
 					<td>SDG2</td>
@@ -181,7 +181,7 @@
 					<td>8:00-10:00 AM</td>
 					<td>Faura 105</td>
 					<td>0</td>
-					<td class="btn-error">Class Full</td>
+					<td class="msg-error">Class Full</td>
 				</tr>
 				<tr>
 					<td>SDG5</td>
@@ -192,7 +192,7 @@
 					<td>8:00-10:00 AM</td>
 					<td>CTC 201</td>
 					<td>32</td>
-					<td class="btn-enlisted">&#10003; Enlisted</td>
+					<td class="msg-enlisted">&#10003; Enlisted</td>
 				</tr>
 				<tr>
 					<td>SDG5</td>
@@ -203,7 +203,7 @@
 					<td>8:00-10:00 AM</td>
 					<td>SOM 205</td>
 					<td>0</td>
-					<td class="btn-error">Conflict</td>
+					<td class="msg-error">Conflict</td>
 				</tr>
 				<tr>
 					<td>SDG2</td>
@@ -229,32 +229,39 @@
 				</div>
 				<div class="class-list">
 					<div class="enlisted-class">
-					<h2>Design for a Better PH: Design Thinking in the Government 101</h2>
-					12 Sep 8:00-10:00 AM<br>
-					<a href="">Delist</a>
-				</div>
-				<div class="empty-class">No class</div>
+						<h2>Design for a Better PH: Design Thinking in the Government 101</h2>
+						12 Sep 8:00-10:00 AM<br>
+						<a href="">Delist</a>
+					</div>
+					<div class="empty-class">No class</div>
 				</div>
 			</div>
-			<div class="toggle-container" onclick="toggleFooter()">
-				<div id="summary-title">Your Enlistment Summary </div>
+			<div id="toggle-container" id="toggle-footer">
+				<div id="toggle-title">Your Enlistment Summary </div>
 				<div id="btn-toggle">&#8249;</div>
 			</div>
 		</div>
     </body>
     <script>
-    	function toggleFooter(){
-    		var container = document.getElementById('enlist-container');
-    		var title = document.getElementById('summary-title');
+		document.getElementById('toggle-container').onclick = function() {
+		    var container = document.getElementById('enlist-container');
+		    var title = document.getElementById('toggle-title');
     		var arrow = document.getElementById('btn-toggle');
-		    if (container.style.display === 'none') {
-		        container.style.display = 'flex';
+    		var table = document.getElementById('table');
+		    if( container.style.height === '0px' ) {
+		        container.style.height = container.scrollHeight+"px";
+		       	container.style.height = 'auto';
+		        container.style.marginTop = '20px';
 		        title.style.display = 'none';
-		        arrow.style.transform= 'rotate(-90deg)'
-		    } else {
-		        container.style.display = 'none';
+		        arrow.style.transform= 'rotate(-90deg)';
+		        // table.style.paddingBottom= container.scrollHeight+"px";
+		    }
+		    else {
+		        container.style.height = '0px';
+		        container.style.marginTop = '0px';
 		        title.style.display = 'flex';
 		        arrow.style.transform= 'rotate(90deg)'
+		        // table.style.paddingBottm='0px';
 		    }
 		}
     </script>
