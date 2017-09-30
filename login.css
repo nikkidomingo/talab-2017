@@ -54,6 +54,10 @@ input[type="submit"]:hover {
 	color: #ffffff;
 }
 
+p {
+	margin-bottom: 30px
+}
+
 /*Home page*/
 
 h1 {

@@ -33,6 +33,7 @@ h1 {
 	color: #314467;
 	background-color: #ffffff;
 	border:none;
+	transition: background-color 0.3s ease;
 }
 
 .btn-enlist {
@@ -51,6 +52,12 @@ h1 {
 	background-color: #d9d9d9;
 	color: #595959;
 }
+
+.btn-enlist:hover,
+.btn-logout:hover {
+	background-color: #f1f1f1;
+}
+
 
 /*Header*/
 
@@ -77,6 +84,26 @@ h1 {
 .logout-container {
 	display: inline-block;
 	margin-top:10px;
+}
+
+.error-message {
+	width:90%;
+	margin:auto;
+	background-color: #F3DCDC;
+	color: #AC4168;
+	padding:20px;
+	margin-top:30px;
+	border-radius: 10px;
+}
+
+.btn-close {
+    margin-left: 15px;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 /*Table*/
@@ -155,7 +182,6 @@ th:first-child  {
 	flex-direction: column;
 	width: 90%;
 	margin:auto;
-	margin-top:20px;
 	height:0px;
 	overflow: hidden;
 
@@ -164,19 +190,6 @@ th:first-child  {
 
     z-index: 1;
 }
-
-/*#enlist-container .container-shown {
-	height:auto;
-	margin-top: 20px;
-}
-
-#toggle-title .container-shown {
-	display:none;
-}
-
-#table .container-shown {
-	transform:rotate(-90deg);
-}*/
 
 .enlist-desc {
 	height:80%;
@@ -266,8 +279,6 @@ th:first-child  {
 	#enlist-container {
 		width:80%;
 		margin:auto;
-		margin-top:20px;
-		height:auto;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
@@ -303,6 +314,7 @@ th:first-child  {
 
 @media all and (min-width: 768px){
 	#enlist-container {
+		display:flex;
 		flex-direction: row;
 	}
 
@@ -312,14 +324,6 @@ th:first-child  {
 
 	.class-list {
 		width: 61%;
-	}
-
-	#enlist-container {
-		display:flex;
-	}
-
-	#toggle-title {
-		display:none;
 	}
 
 	#btn-toggle {

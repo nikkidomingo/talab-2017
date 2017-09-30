@@ -25,6 +25,11 @@
 					<button class="btn btn-logout">Log out</button>
 				</div>
 			</div>
+
+			<div class="error-message">
+				<span class="btn-close" onclick="this.parentElement.style.display='none';">&times;</span> 
+				<b>Oh no!</b> There are no more slots for this class. Please enlist in a different class.
+			</div>
 		</div>
 
 		<div class="enlistment-body">
@@ -220,7 +225,7 @@
 		</div>
 
 		<div class="enlist-summary">
-			<div id="enlist-container">
+			<div id="enlist-container" style="height:0px">
 				<div class="enlist-desc">
 					<h1>Enlist in a class to proceed</h1>
 					To finish your enlistment and see your summary, you need to enlist in a total of <b>4 more hours</b>. You may opt to enlist for two classes or one field trip.
@@ -251,20 +256,20 @@
 		    var title = document.getElementById('toggle-title');
     		var arrow = document.getElementById('btn-toggle');
     		var table = document.getElementById('table');
-		    if( container.style.height === '0px' ) {
+		    if( container.style.height == '0px' ) {
 		        container.style.height = container.scrollHeight+"px";
 		       	container.style.height = 'auto';
 		        container.style.marginTop = '20px';
 		        title.style.display = 'none';
 		        arrow.style.transform= 'rotate(-90deg)';
-		        // table.style.paddingBottom= container.scrollHeight+"px";
+		        table.style.marginBottom= container.scrollHeight+30+"px";
 		    }
 		    else {
 		        container.style.height = '0px';
 		        container.style.marginTop = '0px';
 		        title.style.display = 'flex';
 		        arrow.style.transform= 'rotate(90deg)'
-		        // table.style.paddingBottm='0px';
+		        table.style.marginBottom='0px';
 		    }
 		}
     </script>
