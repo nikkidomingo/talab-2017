@@ -10,26 +10,34 @@
         <script src="sorttable.js"></script>
     </head>
     <body>
+    	<header>
+    		<div class="nav-container">
+    			<ul class="nav-links">
+    				<li id="nav-title"><a href="#">Admin Page</a></li>
+    				<div style="float:right">
+	    				<li><a href="#">CLASSES</a></li>
+	    				<li><a href="#">STUDENTS</a></li>
+	    				<li><a href="#">ENLISTMENT</a></li>
+	    				<li><a href="#">LOG OUT</a></li>
+    				</div>
+    			</ul>
+			</div>
+    	</header>
     	<div class="header-container">
 	    	<div class="header-title">
-				<h1>Hi Nikki, enlist in a TALAB class.</h1>
-				You are required to enilst in 4 hours worth of classes.
+				<h1>List of Enlisted Students</h1>
 			</div>
 			
 			<div class="header-controls">
-				<div class="checkbox-container">
-					<input type="checkbox" id="show-avail-classes">
-					<label for="show-avail-classes"></label><b>Show available classes only</b>
-				</div>
 				<div class="logout-container">
-					<button class="btn btn-logout">Log out</button>
+					<button class="btn btn-logout">+ Add Class</button>
 				</div>
 			</div>
-
-			<div class="error-message">
+			
+			<!-- <div class="error-message">
 				<span class="btn-close" onclick="this.parentElement.style.display='none';">&times;</span> 
 				<b>Oh no!</b> There are no more slots for this class. Please enlist in a different class.
-			</div>
+			</div> -->
 		</div>
 
 		<div class="enlistment-body">
@@ -44,6 +52,7 @@
 					<th>Venue</th>
 					<th>Slots</th>
 					<th></th>
+					<th>Other Info</th>
 				</tr>
 				<tr>
 					<td>SDG3</td>
@@ -53,8 +62,9 @@
 					<td>14 Sept</td>
 					<td>8:00-10:00 AM</td>
 					<td>Faura 105</td>
-					<td>0</td>
+					<td>10</td>
 					<td class="msg-error">Class Full</td>
+					<td>Hidden info here</td>
 				</tr>
 				<tr>
 					<td>SDG5</td>
@@ -66,6 +76,7 @@
 					<td>CTC 201</td>
 					<td>32</td>
 					<td class="msg-enlisted">&#10003; Enlisted</td>
+					<td>Hidden info here</td>
 				</tr>
 				<tr>
 					<td>SDG5</td>
@@ -75,8 +86,9 @@
 					<td>14 Sept</td>
 					<td>8:00-10:00 AM</td>
 					<td>SOM 205</td>
-					<td>0</td>
+					<td>100</td>
 					<td class="msg-error">Conflict</td>
+					<td>Hidden info here</td>
 				</tr>
 				<tr>
 					<td>SDG2</td>
@@ -86,8 +98,9 @@
 					<td>14 Sept</td>
 					<td>8:00-10:00 AM</td>
 					<td>K 205</td>
-					<td>5</td>
+					<td>15</td>
 					<td><button class="btn btn-enlist">Enlist</button></td>
+					<td>Hidden info here</td>
 				</tr>
 				<tr>
 					<td>SDG3</td>
@@ -97,8 +110,9 @@
 					<td>14 Sept</td>
 					<td>8:00-10:00 AM</td>
 					<td>Faura 105</td>
-					<td>0</td>
+					<td>10</td>
 					<td class="msg-error">Class Full</td>
+					<td>Hidden info here</td>
 				</tr>
 				<tr>
 					<td>SDG5</td>
@@ -110,6 +124,7 @@
 					<td>CTC 201</td>
 					<td>32</td>
 					<td class="msg-enlisted">&#10003; Enlisted</td>
+					<td>Hidden info here</td>
 				</tr>
 				<tr>
 					<td>SDG5</td>
@@ -119,8 +134,9 @@
 					<td>14 Sept</td>
 					<td>8:00-10:00 AM</td>
 					<td>SOM 205</td>
-					<td>0</td>
+					<td>100</td>
 					<td class="msg-error">Conflict</td>
+					<td>Hidden info here</td>
 				</tr>
 				<tr>
 					<td>SDG2</td>
@@ -130,124 +146,11 @@
 					<td>14 Sept</td>
 					<td>8:00-10:00 AM</td>
 					<td>K 205</td>
-					<td>5</td>
+					<td>15</td>
 					<td><button class="btn btn-enlist">Enlist</button></td>
-				</tr>
-				<tr>
-					<td>SDG3</td>
-					<td>How to be Steve Jobs</td>
-					<td>Talk</td>
-					<td>Steve Jobs</td>
-					<td>14 Sept</td>
-					<td>8:00-10:00 AM</td>
-					<td>Faura 105</td>
-					<td>0</td>
-					<td class="msg-error">Class Full</td>
-				</tr>
-				<tr>
-					<td>SDG5</td>
-					<td>Design for a Better PH: Design Thinking in the Government 101</td>
-					<td>Talk</td>
-					<td>Leni Robredo</td>
-					<td>15 Sept</td>
-					<td>8:00-10:00 AM</td>
-					<td>CTC 201</td>
-					<td>32</td>
-					<td class="msg-enlisted">&#10003; Enlisted</td>
-				</tr>
-				<tr>
-					<td>SDG5</td>
-					<td>Youth Leadership in Asian Development</td>
-					<td>Talk</td>
-					<td>Marielle Impuerto</td>
-					<td>14 Sept</td>
-					<td>8:00-10:00 AM</td>
-					<td>SOM 205</td>
-					<td>0</td>
-					<td class="msg-error">Conflict</td>
-				</tr>
-				<tr>
-					<td>SDG2</td>
-					<td>Sandiganbayan</td>
-					<td>Field Trip</td>
-					<td>Mark Balmes</td>
-					<td>14 Sept</td>
-					<td>8:00-10:00 AM</td>
-					<td>K 205</td>
-					<td>5</td>
-					<td><button class="btn btn-enlist">Enlist</button></td>
-				</tr>
-				<tr>
-					<td>SDG3</td>
-					<td>How to be Steve Jobs</td>
-					<td>Talk</td>
-					<td>Steve Jobs</td>
-					<td>14 Sept</td>
-					<td>8:00-10:00 AM</td>
-					<td>Faura 105</td>
-					<td>0</td>
-					<td class="msg-error">Class Full</td>
-				</tr>
-				<tr>
-					<td>SDG5</td>
-					<td>Design for a Better PH: Design Thinking in the Government 101</td>
-					<td>Talk</td>
-					<td>Leni Robredo</td>
-					<td>15 Sept</td>
-					<td>8:00-10:00 AM</td>
-					<td>CTC 201</td>
-					<td>32</td>
-					<td class="msg-enlisted">&#10003; Enlisted</td>
-				</tr>
-				<tr>
-					<td>SDG5</td>
-					<td>Youth Leadership in Asian Development</td>
-					<td>Talk</td>
-					<td>Marielle Impuerto</td>
-					<td>14 Sept</td>
-					<td>8:00-10:00 AM</td>
-					<td>SOM 205</td>
-					<td>0</td>
-					<td class="msg-error">Conflict</td>
-				</tr>
-				<tr>
-					<td>SDG2</td>
-					<td>Sandiganbayan</td>
-					<td>Field Trip</td>
-					<td>Mark Balmes</td>
-					<td>14 Sept</td>
-					<td>8:00-10:00 AM</td>
-					<td>K 205</td>
-					<td>5</td>
-					<td><button class="btn btn-enlist">Enlist</button></td>
+					<td>Hidden info here</td>
 				</tr>
 			</table>
-		</div>
-
-		<div class="enlist-summary">
-			<div id="enlist-container" style="height:0px">
-				<div class="enlist-desc">
-					<h1>Enlist in a class to proceed</h1>
-					To finish your enlistment and see your summary, you need to enlist in a total of <b>4 more hours</b>. You may opt to enlist for two classes or one field trip.
-					
-					<!-- This link is only for testing purposes -->
-					<a href="/talab-2017/home.html" style="text-decoration: none;">
-						<button class="btn btn-finish">Finish enlistment</button>
-					</a>
-				</div>
-				<div class="class-list">
-					<div class="enlisted-class">
-						<h2>Design for a Better PH: Design Thinking in the Government 101</h2>
-						12 Sep 8:00-10:00 AM<br>
-						<a href="">Delist</a>
-					</div>
-					<div class="empty-class">No class</div>
-				</div>
-			</div>
-			<div id="toggle-container" id="toggle-footer">
-				<div id="toggle-title">Your Enlistment Summary </div>
-				<div id="btn-toggle">&#8249;</div>
-			</div>
 		</div>
     </body>
     <script>

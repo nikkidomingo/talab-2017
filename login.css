@@ -35,6 +35,7 @@ input[type="submit"] {
 	font-size: 12px;
 	font-family: 'Roboto', sans-serif;
     padding:0 20px;
+    margin:auto;
     margin-bottom: 5px;
     border-radius: 3px;
     border: 1px solid white
@@ -121,6 +122,26 @@ button {
 	color: #314467;
 	background-color: #ffffff;
 	border:none;
+}
+
+.error-message {
+	width:80%;
+	margin:auto;
+	background-color: #F3DCDC;
+	color: #AC4168;
+	padding:5%;
+	margin-bottom: 30px;
+	border-radius: 10px;
+}
+
+.btn-close {
+    margin-left: 15px;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 @media all and (min-width: 768px) {

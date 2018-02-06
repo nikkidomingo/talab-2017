@@ -139,11 +139,23 @@ tr:nth-child(odd) {
 	background: #f8feff;
 }
 
-td:last-child,
 td:first-child,
 th:first-child  { 
 	text-align: center;
 	padding:25px 20px;
+}
+
+td:nth-child(2){
+	max-width: 300px;
+}
+
+td:nth-child(9){
+	text-align: center;
+}
+
+th:last-child,
+td:last-child {
+	display: none;
 }
 
 .msg-error {
@@ -158,6 +170,50 @@ th:first-child  {
 	color: #4ccd73;
 	text-transform: uppercase;
 	font-size: 12px;
+}
+
+/* Nav */
+.nav-container {
+    background: #34425b;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding: 0 10%;
+}
+
+.nav-links li {
+    float: left;
+    line-height:75px;
+}
+
+#nav-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav-links li a {
+    display: block;
+    color: white;
+    padding: 14px 22px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-links li:first-child a{
+    padding-left: 0;
+}
+
+.nav-links li:last-child a{
+    padding-right: 0;
+}
+
+.nav-links li a:hover{
+    background: #34425b;
+    color: #99a0ad;
 }
 
 /*Footer*/

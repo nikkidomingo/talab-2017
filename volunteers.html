@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Talab 2017</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+        <script src="sorttable.js"></script>
+    </head>
+    <body>
+    	<header>
+    		<div class="nav-container">
+    			<ul class="nav-links">
+    				<li id="nav-title"><a href="#">Admin Page</a></li>
+    				<div style="float:right">
+	    				<li><a href="#">CLASSES</a></li>
+	    				<li><a href="#">STUDENTS</a></li>
+	    				<li><a href="#">ENLISTMENT</a></li>
+	    				<li><a href="#">LOG OUT</a></li>
+    				</div>
+    			</ul>
+			</div>
+    	</header>
+    	<div class="header-container">
+	    	<div class="header-title">
+				<h1>List of Volunteers</h1>
+			</div>
+			
+			<div class="header-controls">
+				<div class="logout-container">
+					<button class="btn btn-logout">+ Add Student</button>
+				</div>
+			</div>
+			
+			<!-- <div class="error-message">
+				<span class="btn-close" onclick="this.parentElement.style.display='none';">&times;</span> 
+				<b>Oh no!</b> There are no more slots for this class. Please enlist in a different class.
+			</div> -->
+		</div>
+
+		<div class="enlistment-body">
+			<table id="table" class="sortable">
+				<tr>
+					<th>SDG</th>
+					<th>Topic</th>
+					<th>Type</th>
+					<th>Speaker</th>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Venue</th>
+					<th>Slots</th>
+					<th></th>
+					<th>Other Info</th>
+				</tr>
+				<tr>
+					<td>SDG3</td>
+					<td>How to be Steve Jobs</td>
+					<td>Talk</td>
+					<td>Steve Jobs</td>
+					<td>14 Sept</td>
+					<td>8:00-10:00 AM</td>
+					<td>Faura 105</td>
+					<td>10</td>
+					<td class="msg-error">Class Full</td>
+					<td>Hidden info here</td>
+				</tr>
+				<tr>
+					<td>SDG5</td>
+					<td>Design for a Better PH: Design Thinking in the Government 101</td>
+					<td>Talk</td>
+					<td>Leni Robredo</td>
+					<td>15 Sept</td>
+					<td>8:00-10:00 AM</td>
+					<td>CTC 201</td>
+					<td>32</td>
+					<td class="msg-enlisted">&#10003; Enlisted</td>
+					<td>Hidden info here</td>
+				</tr>
+				<tr>
+					<td>SDG5</td>
+					<td>Youth Leadership in Asian Development</td>
+					<td>Talk</td>
+					<td>Marielle Impuerto</td>
+					<td>14 Sept</td>
+					<td>8:00-10:00 AM</td>
+					<td>SOM 205</td>
+					<td>100</td>
+					<td class="msg-error">Conflict</td>
+					<td>Hidden info here</td>
+				</tr>
+				<tr>
+					<td>SDG2</td>
+					<td>Sandiganbayan</td>
+					<td>Field Trip</td>
+					<td>Mark Balmes</td>
+					<td>14 Sept</td>
+					<td>8:00-10:00 AM</td>
+					<td>K 205</td>
+					<td>15</td>
+					<td><button class="btn btn-enlist">Enlist</button></td>
+					<td>Hidden info here</td>
+				</tr>
+				<tr>
+					<td>SDG3</td>
+					<td>How to be Steve Jobs</td>
+					<td>Talk</td>
+					<td>Steve Jobs</td>
+					<td>14 Sept</td>
+					<td>8:00-10:00 AM</td>
+					<td>Faura 105</td>
+					<td>10</td>
+					<td class="msg-error">Class Full</td>
+					<td>Hidden info here</td>
+				</tr>
+				<tr>
+					<td>SDG5</td>
+					<td>Design for a Better PH: Design Thinking in the Government 101</td>
+					<td>Talk</td>
+					<td>Leni Robredo</td>
+					<td>15 Sept</td>
+					<td>8:00-10:00 AM</td>
+					<td>CTC 201</td>
+					<td>32</td>
+					<td class="msg-enlisted">&#10003; Enlisted</td>
+					<td>Hidden info here</td>
+				</tr>
+				<tr>
+					<td>SDG5</td>
+					<td>Youth Leadership in Asian Development</td>
+					<td>Talk</td>
+					<td>Marielle Impuerto</td>
+					<td>14 Sept</td>
+					<td>8:00-10:00 AM</td>
+					<td>SOM 205</td>
+					<td>100</td>
+					<td class="msg-error">Conflict</td>
+					<td>Hidden info here</td>
+				</tr>
+				<tr>
+					<td>SDG2</td>
+					<td>Sandiganbayan</td>
+					<td>Field Trip</td>
+					<td>Mark Balmes</td>
+					<td>14 Sept</td>
+					<td>8:00-10:00 AM</td>
+					<td>K 205</td>
+					<td>15</td>
+					<td><button class="btn btn-enlist">Enlist</button></td>
+					<td>Hidden info here</td>
+				</tr>
+			</table>
+		</div>
+    </body>
+    <script>
+		document.getElementById('toggle-container').onclick = function() {
+		    var container = document.getElementById('enlist-container');
+		    var title = document.getElementById('toggle-title');
+    		var arrow = document.getElementById('btn-toggle');
+    		var table = document.getElementById('table');
+		    if( container.style.height == '0px' ) {
+		        container.style.height = container.scrollHeight+"px";
+		       	container.style.height = 'auto';
+		        container.style.marginTop = '20px';
+		        title.style.display = 'none';
+		        arrow.style.transform= 'rotate(-90deg)';
+		        table.style.marginBottom= container.scrollHeight+30+"px";
+		    }
+		    else {
+		        container.style.height = '0px';
+		        container.style.marginTop = '0px';
+		        title.style.display = 'flex';
+		        arrow.style.transform= 'rotate(90deg)'
+		        table.style.marginBottom='0px';
+		    }
+		}
+    </script>
+</html>
