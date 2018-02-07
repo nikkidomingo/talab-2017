@@ -10,19 +10,32 @@
         <script src="sorttable.js"></script>
     </head>
     <body>
-    	<div class="header-container">
-	    	<div class="header-title">
-				<h1>Hi Nikki, enlist in a TALAB class.</h1>
-				You are required to enilst in 4 hours worth of classes.
+    	<header>
+    		<div class="nav-container">
+    			<ul class="nav">
+    				<li id="nav-title"><a href="#">TALAB Enlistment System</a></li>
+    				<div class="nav-links">
+	    				<li><a href="#">Enlist</a></li>
+	    				<li><a href="#">Change Password</a></li>
+	    				<li><a href="#">Enlistment Summary</a></li>
+	    				<li><a href="#">Log Out</a></li>
+    				</div>
+    			</ul>
 			</div>
-			
+    	</header>
+
+    	<div class="header-title">
+			<h1>Hi Nikki, here is the list of TALAB classes this year.</h1>
+			You are required to enilst in 4 hours worth of classes.
+		</div>
+    	<div class="header-container">
 			<div class="header-controls">
+				<div class="search-bar-container">
+					<input type="text" id="search-bar" placeholder="Search for a class, speaker, or SDG">
+				</div>
 				<div class="checkbox-container">
 					<input type="checkbox" id="show-avail-classes">
 					<label for="show-avail-classes"></label><b>Show available classes only</b>
-				</div>
-				<div class="logout-container">
-					<button class="btn btn-logout">Log out</button>
 				</div>
 			</div>
 
@@ -35,189 +48,144 @@
 		<div class="enlistment-body">
 			<table id="table" class="sortable">
 				<tr>
-					<th>SDG</th>
 					<th>Topic</th>
 					<th>Type</th>
-					<th>Speaker</th>
 					<th>Date</th>
 					<th>Time</th>
+					<th>Speaker</th>
 					<th>Venue</th>
+					<th>SDG</th>
 					<th>Slots</th>
 					<th></th>
 				</tr>
 				<tr>
-					<td>SDG3</td>
 					<td>How to be Steve Jobs</td>
 					<td>Talk</td>
-					<td>Steve Jobs</td>
 					<td>14 Sept</td>
 					<td>8:00-10:00 AM</td>
+					<td>Steve Jobs</td>
 					<td>Faura 105</td>
+					<td>SDG3</td>
 					<td>0</td>
 					<td class="msg-error">Class Full</td>
 				</tr>
 				<tr>
-					<td>SDG5</td>
 					<td>Design for a Better PH: Design Thinking in the Government 101</td>
 					<td>Talk</td>
-					<td>Leni Robredo</td>
 					<td>15 Sept</td>
 					<td>8:00-10:00 AM</td>
+					<td>Leni Robredo</td>
 					<td>CTC 201</td>
+					<td>SDG3</td>
 					<td>32</td>
 					<td class="msg-enlisted">&#10003; Enlisted</td>
 				</tr>
 				<tr>
-					<td>SDG5</td>
 					<td>Youth Leadership in Asian Development</td>
 					<td>Talk</td>
-					<td>Marielle Impuerto</td>
 					<td>14 Sept</td>
 					<td>8:00-10:00 AM</td>
+					<td>Marielle Impuerto</td>
 					<td>SOM 205</td>
+					<td>SDG5</td>
 					<td>0</td>
 					<td class="msg-error">Conflict</td>
 				</tr>
 				<tr>
-					<td>SDG2</td>
 					<td>Sandiganbayan</td>
 					<td>Field Trip</td>
-					<td>Mark Balmes</td>
 					<td>14 Sept</td>
 					<td>8:00-10:00 AM</td>
+					<td>Mark Balmes</td>
 					<td>K 205</td>
+					<td>SDG2</td>
 					<td>5</td>
 					<td><button class="btn btn-enlist">Enlist</button></td>
 				</tr>
 				<tr>
-					<td>SDG3</td>
 					<td>How to be Steve Jobs</td>
 					<td>Talk</td>
-					<td>Steve Jobs</td>
 					<td>14 Sept</td>
 					<td>8:00-10:00 AM</td>
+					<td>Steve Jobs</td>
 					<td>Faura 105</td>
+					<td>SDG3</td>
 					<td>0</td>
 					<td class="msg-error">Class Full</td>
 				</tr>
 				<tr>
-					<td>SDG5</td>
 					<td>Design for a Better PH: Design Thinking in the Government 101</td>
 					<td>Talk</td>
-					<td>Leni Robredo</td>
 					<td>15 Sept</td>
 					<td>8:00-10:00 AM</td>
+					<td>Leni Robredo</td>
 					<td>CTC 201</td>
+					<td>SDG3</td>
 					<td>32</td>
 					<td class="msg-enlisted">&#10003; Enlisted</td>
 				</tr>
 				<tr>
-					<td>SDG5</td>
 					<td>Youth Leadership in Asian Development</td>
 					<td>Talk</td>
-					<td>Marielle Impuerto</td>
 					<td>14 Sept</td>
 					<td>8:00-10:00 AM</td>
+					<td>Marielle Impuerto</td>
 					<td>SOM 205</td>
+					<td>SDG5</td>
 					<td>0</td>
 					<td class="msg-error">Conflict</td>
 				</tr>
 				<tr>
-					<td>SDG2</td>
 					<td>Sandiganbayan</td>
 					<td>Field Trip</td>
-					<td>Mark Balmes</td>
 					<td>14 Sept</td>
 					<td>8:00-10:00 AM</td>
+					<td>Mark Balmes</td>
 					<td>K 205</td>
+					<td>SDG2</td>
 					<td>5</td>
 					<td><button class="btn btn-enlist">Enlist</button></td>
-				</tr>
-				<tr>
-					<td>SDG3</td>
+				</tr><tr>
 					<td>How to be Steve Jobs</td>
 					<td>Talk</td>
-					<td>Steve Jobs</td>
 					<td>14 Sept</td>
 					<td>8:00-10:00 AM</td>
+					<td>Steve Jobs</td>
 					<td>Faura 105</td>
+					<td>SDG3</td>
 					<td>0</td>
 					<td class="msg-error">Class Full</td>
 				</tr>
 				<tr>
-					<td>SDG5</td>
 					<td>Design for a Better PH: Design Thinking in the Government 101</td>
 					<td>Talk</td>
-					<td>Leni Robredo</td>
 					<td>15 Sept</td>
 					<td>8:00-10:00 AM</td>
+					<td>Leni Robredo</td>
 					<td>CTC 201</td>
-					<td>32</td>
-					<td class="msg-enlisted">&#10003; Enlisted</td>
-				</tr>
-				<tr>
-					<td>SDG5</td>
-					<td>Youth Leadership in Asian Development</td>
-					<td>Talk</td>
-					<td>Marielle Impuerto</td>
-					<td>14 Sept</td>
-					<td>8:00-10:00 AM</td>
-					<td>SOM 205</td>
-					<td>0</td>
-					<td class="msg-error">Conflict</td>
-				</tr>
-				<tr>
-					<td>SDG2</td>
-					<td>Sandiganbayan</td>
-					<td>Field Trip</td>
-					<td>Mark Balmes</td>
-					<td>14 Sept</td>
-					<td>8:00-10:00 AM</td>
-					<td>K 205</td>
-					<td>5</td>
-					<td><button class="btn btn-enlist">Enlist</button></td>
-				</tr>
-				<tr>
 					<td>SDG3</td>
-					<td>How to be Steve Jobs</td>
-					<td>Talk</td>
-					<td>Steve Jobs</td>
-					<td>14 Sept</td>
-					<td>8:00-10:00 AM</td>
-					<td>Faura 105</td>
-					<td>0</td>
-					<td class="msg-error">Class Full</td>
-				</tr>
-				<tr>
-					<td>SDG5</td>
-					<td>Design for a Better PH: Design Thinking in the Government 101</td>
-					<td>Talk</td>
-					<td>Leni Robredo</td>
-					<td>15 Sept</td>
-					<td>8:00-10:00 AM</td>
-					<td>CTC 201</td>
 					<td>32</td>
 					<td class="msg-enlisted">&#10003; Enlisted</td>
 				</tr>
 				<tr>
-					<td>SDG5</td>
 					<td>Youth Leadership in Asian Development</td>
 					<td>Talk</td>
-					<td>Marielle Impuerto</td>
 					<td>14 Sept</td>
 					<td>8:00-10:00 AM</td>
+					<td>Marielle Impuerto</td>
 					<td>SOM 205</td>
+					<td>SDG5</td>
 					<td>0</td>
 					<td class="msg-error">Conflict</td>
 				</tr>
 				<tr>
-					<td>SDG2</td>
 					<td>Sandiganbayan</td>
 					<td>Field Trip</td>
-					<td>Mark Balmes</td>
 					<td>14 Sept</td>
 					<td>8:00-10:00 AM</td>
+					<td>Mark Balmes</td>
 					<td>K 205</td>
+					<td>SDG2</td>
 					<td>5</td>
 					<td><button class="btn btn-enlist">Enlist</button></td>
 				</tr>
@@ -237,8 +205,13 @@
 				</div>
 				<div class="class-list">
 					<div class="enlisted-class">
-						<h2>Design for a Better PH: Design Thinking in the Government 101</h2>
-						12 Sep 8:00-10:00 AM<br>
+						<h2>
+							Design for a Better PH: Design Thinking in the Government 101
+							<span class="volunteer-tag">Volunteer </span>
+						</h2>
+						12 Sep 8:00-10:00 AM<br />
+						Hours credited: 2
+						<br />
 						<a href="">Delist</a>
 					</div>
 					<div class="empty-class">No class</div>

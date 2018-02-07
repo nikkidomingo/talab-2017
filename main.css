@@ -67,13 +67,23 @@ h1 {
 
 .header-title {
 	width:90%;
+	text-align: center;
 	margin:auto;
+	margin-top: 50px;
 }
 
 .header-controls {
 	width:100%;
 	padding-top:20px;
 	text-align: center;
+}
+
+.search-bar-container input {
+	border: none;
+	border-radius: 3px;
+	font-size: 16px;
+	min-width: 275px;
+	padding: 15px;
 }
 
 .checkbox-container {
@@ -139,11 +149,14 @@ tr:nth-child(odd) {
 	background: #f8feff;
 }
 
-td:last-child,
-td:first-child,
-th:first-child  { 
+td:last-child { 
 	text-align: center;
 	padding:25px 20px;
+}
+
+td:first-child,
+th:first-child {
+	padding-left: 50px;
 }
 
 .msg-error {
@@ -158,6 +171,56 @@ th:first-child  {
 	color: #4ccd73;
 	text-transform: uppercase;
 	font-size: 12px;
+}
+
+/* Navbar */
+
+.nav-container {
+    background: #34425b;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding: 0 10%;
+}
+
+.nav li {
+    float: left;
+    line-height:75px;
+}
+
+.nav-links {
+	float: right;
+	text-transform: uppercase;
+}
+
+#nav-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav li a {
+    display: block;
+    color: white;
+    padding: 14px 22px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav li:first-child a{
+    padding-left: 0;
+}
+
+.nav li:last-child a{
+    padding-right: 0;
+}
+
+.nav li a:hover{
+    background: #34425b;
+    color: #99a0ad;
 }
 
 /*Footer*/
@@ -222,6 +285,19 @@ th:first-child  {
 .enlisted-class h2 {
 	font-size: 14px;
 	margin-top: 0;
+}
+
+.enlisted-class h2 .volunteer-tag {
+	display: inline-block;
+	padding: 3px 5px;
+	border-radius: 3px; 
+
+	font-size: 8px;
+	font-weight: 400;
+	text-transform: uppercase;
+
+	background-color: #ca3838;
+	color: #ffffff;
 }
 
 .enlisted-class a {
@@ -337,15 +413,24 @@ th:first-child  {
 
 @media all and (min-width: 1024px) {
 	.header-title {
-		display:inline-block;
-		width:auto;
+		/*display:inline-block;*/
+		/*width:auto;*/
 	}
 
 	.header-controls {
-		display: inline-block;
+/*		display: inline-block;
 		float: right;
-		width:auto;
+		width:auto;*/
+		text-align: left;
 		padding-top: 0px;
+	}
+
+	.header-controls .search-bar-container {
+		display: inline-block;
+	}
+
+	.header-controls .checkbox-container {
+		float: right;
 	}
 
 	.enlistment-body {
