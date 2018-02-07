@@ -8,6 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="main.css">
         <script src="sorttable.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  		<script type="text/javascript" src="js/general.js"></script>
     </head>
     <body>
     	<header>
@@ -54,7 +56,7 @@
 				
 				<div class="header-controls">
 					<div class="logout-container">
-						<button class="btn btn-green">+ Add a Volunteer</button>
+						<a id="addVolToggle"><button class="btn btn-green">+ Add a Volunteer</button></a>
 					</div>
 				</div>
 				
@@ -177,6 +179,30 @@
 				</tr>
 			</table>
 		</div>
+
+		<div id="modal" class="modal">
+		    <div class="container">
+		      	<div class="row modal-content">
+		          	<h2 id="close">&times;</h2>
+		          	<h3 id="modalTitle">Title</h3>
+		          	<form action="" method="post">
+			            <label for="class">Class</label>
+			            <input type="text" name="class" disabled placeholder="Sandiganbayan">
+
+			            <label for="id_number">ID Number</label>
+			            <input type="text" name="id_number">
+
+			            <div> 
+			                <label for="hours" class="alt-label">No. of Hours</label>
+			                <input type="number" name="num_hours">
+			            </div>
+
+			            <button type="submit" id="submit"></button>
+		          	</form>
+		      	</div>
+		    </div>
+		</div>
+
     </body>
     <script>
 		document.getElementById('toggle-container').onclick = function() {
