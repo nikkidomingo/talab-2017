@@ -45,7 +45,6 @@ h1 {
 	color: #ffffff;
 	margin:15px 0;
 	display:block;
-
 }
 
 .btn-finish:disabled{
@@ -58,6 +57,40 @@ h1 {
 	background-color: #f1f1f1;
 }
 
+.btn-green {
+	background: #58d07d;
+	color: white;
+	width: 200px;
+}
+
+.btn-green:disabled {
+	background: #abe1c0;
+}
+
+.btn-navy {
+	background: #34425b;
+	color: white;
+	width: 200px;
+}
+
+.btn-red {
+	background: #ca3838;
+	color: white;
+	width: 170px;
+	margin-left: 15px;
+}
+
+.btn-transparent {
+	background:transparent;
+	border: 1px solid #34425b;
+	width: 190px;
+}
+
+.ml {
+	margin-left: 15px;
+}
+
+
 
 /*Header*/
 
@@ -65,15 +98,48 @@ h1 {
 	padding: 30px 0;
 }
 
+.header-wrapper {
+	width:80%;
+	padding: 0 10%;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    position:relative;
+}
+
+.extra-margin-top {
+	margin-top: 30px !important;
+}
+
+.header-info p{
+	margin:6px 0;
+	font-weight:normal;
+}
+
+.header-info p span:first-child {
+	margin:0 10px 0 0;
+}
+
+.header-info p span {
+	margin:0 10px;
+}
+
 .header-title {
-	width:90%;
+	display:inline-block;
+	width:100%;
 	margin:auto;
+}
+
+.header-batch {
+	font-weight: bold;
+	position:absolute;
+	left:10%;
 }
 
 .header-controls {
 	width:100%;
 	padding-top:20px;
-	text-align: center;
 }
 
 .checkbox-container {
@@ -83,7 +149,9 @@ h1 {
 
 .logout-container {
 	display: inline-block;
-	margin-top:10px;
+	position:absolute;
+	right:10%;
+	vertical-align:middle;
 }
 
 .error-message {
@@ -327,7 +395,7 @@ td:last-child {
 
 @media all and (min-width: 426px) {
 	.header-container {
-		width:80%;
+		width:100%; /*changed*/
 		margin:auto;
 		vertical-align: center;
 	}
