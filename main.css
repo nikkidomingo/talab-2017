@@ -33,6 +33,10 @@ h1 {
 }
 
 .modal{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+
 	display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -43,10 +47,6 @@ h1 {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4);
     overflow-y: scroll;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .modal-content{

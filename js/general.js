@@ -46,9 +46,9 @@ $(document).ready(function(){
 
    function modalToggle(){
    		if(modal.is(":visible")){
-   			modal.hide();
+   			modal.css('display', 'none');
    		}else{
-   			modal.show();
+   			modal.css('display', 'flex');
    		}
    }
 }); 

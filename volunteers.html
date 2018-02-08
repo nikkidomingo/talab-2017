@@ -199,29 +199,5 @@
 		      	</div>
 		    </div>
 		</div>
-
     </body>
-    <script>
-		document.getElementById('toggle-container').onclick = function() {
-		    var container = document.getElementById('enlist-container');
-		    var title = document.getElementById('toggle-title');
-    		var arrow = document.getElementById('btn-toggle');
-    		var table = document.getElementById('table');
-		    if( container.style.height == '0px' ) {
-		        container.style.height = container.scrollHeight+"px";
-		       	container.style.height = 'auto';
-		        container.style.marginTop = '20px';
-		        title.style.display = 'none';
-		        arrow.style.transform= 'rotate(-90deg)';
-		        table.style.marginBottom= container.scrollHeight+30+"px";
-		    }
-		    else {
-		        container.style.height = '0px';
-		        container.style.marginTop = '0px';
-		        title.style.display = 'flex';
-		        arrow.style.transform= 'rotate(90deg)'
-		        table.style.marginBottom='0px';
-		    }
-		}
-    </script>
 </html>
