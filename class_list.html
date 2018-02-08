@@ -157,51 +157,105 @@
 			</table>
 		</div>
 
-		<div id="modal" class="modal">
+		<!-- <div id="modal" class="modal add-class">
 		    <div class="container">
 		      	<div class="modal-content">
 		          	<h2 id="close" class="">&times;</h2>
-		          	<h3 id="modalTitle">Title</h3>
+		          	<h3 id="modalTitle">Add a Class</h3>
 		          	<form action="" method="post">
-			            <div>
+			            <div class="field">
 				            <label for="class_name">Name of Class</label>
 				            <input type="text" name="class_name">
 						</div>
-						<div>
+						<div class="field">
 				            <label for="SDG">SDG</label>
 				            <input type="text" name="SDG">
 			            </div>
-			            <div> 
+			            <div class="field"> 
 			                <label for="num_slots">Number of Slots</label>
 			                <input type="text" name="num_slots">
 			            </div>
-			            <div>
+			            <div class="field">
 				            <label for="class_type">Class Type</label>
 				            <input type="text" name="class_type">
 						</div>
-						<div>
+						<div class="field">
 				            <label for="speaker">Speaker</label>
 				            <input type="text" name="speaker">
 			            </div>
-			            <div> 
+			            <div class="field"> 
 			                <label for="date">Date</label>
 			                <input type="text" name="date">
 			            </div>
-			            <div>
+			            <div class="field time">
 				            <label for="time">Time</label>
-				            <input type="text" name="start_time"> <p> to </p>
-				            <input type="text" name="end_time">
+					        <input type="text" name="start_time"> 
+					        <span> to </span> 
+					    	<input type="text" name="end_time">
 						</div>
-						<div>
+						<div class="field">
 				            <label for="venue">Venue</label>
 				            <input type="text" name="venue">
 			            </div>
 
-			            <button type="submit" class="btn-navy" id="submit"></button>
+			            <button type="submit" class="btn-navy" id="submit">Create Class</button>
 		          	</form>
 		      	</div>
 		    </div>
-		</div>
+		</div> -->
+
+		<!-- <div id="modal" class="modal status-enlistment">
+		    <div class="container">
+		      	<div class="modal-content">
+		          	<h2 id="close" class="">&times;</h2>
+		          	<h3 id="modalTitle ">Status of Enlistment</h3>
+		          	<form action="" method="post">
+		          		<div class="checkbox">
+			            	<input type="checkbox" id="change-password-period" name="change-password-period" value="mail">
+							<label for="change-password-period">Change Password Period</label>
+			            </div>
+
+		          		<div class="checkbox">
+			            	<input type="checkbox" id="enlistment-period" name="enlistment-period" value="mail">
+							<label for="enlistment-period">Enlistment Period</label>
+			            </div>
+
+			            <div class="radio">
+			                <div class="radio-choices">
+			                	<div class="field">
+				                	<input type="radio" id="batch1" name="choice-batch-1" value="email">
+							    	<label for="choice-batch-1">1 (Feb 15, 8AM-10AM)</label>
+								</div>
+						
+
+							    <div class="field">
+							    	<input type="radio" id="choice-batch-2" name="batch" value="phone">
+							    	<label for="choice-batch-2">2 (Feb 15, 1PM-4PM)</label>
+								</div>
+								
+
+								<div class="field">
+							    	<input type="radio" id="choice-batch-3" name="batch" value="mail">
+							    	<label for="choice-batch-3">3 (Feb 15, 4PM-8PM)</label>
+								</div>
+
+								<div class="field">
+							    	<input type="radio" id="choice-batch-4" name="batch" value="mail">
+							    	<label for="choice-batch-4">4 (Feb 16, 8AM-10AM)</label>
+								</div>
+
+								<div class="field">
+							    	<input type="radio" id="choice-free" name="batch" value="mail">
+							    	<label for="choice-free">Free-for-all (Feb 16, 1PM-8PM)</label>
+								</div>
+							</div>
+			            </div>
+			            <button type="submit" class="btn-navy" id="submit">Save Changes</button>
+		          	</form>
+		      	</div>
+		    </div>
+		</div> -->
+
 
     </body>
     <script>

@@ -144,6 +144,35 @@ h1 {
 	margin:auto;
 }
 
+.add-class .time input {
+	width: 54px;
+	float: none;
+}
+
+.add-class .time span {
+	margin: 0 15px;
+}
+
+.add-class .time label {
+	margin-right: 122px;
+}
+
+
+.status-enlistment .checkbox:first-child {
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.status-enlistment .checkbox {
+	text-align: left;
+}
+
+.status-enlistment .radio-choices {
+	float: none;
+	margin-top: 0;
+	width: auto;
+}
+
 .modal-content #submit {
 	padding:10px;
 	margin-top: 18px;
