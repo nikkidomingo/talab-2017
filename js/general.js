@@ -7,10 +7,15 @@ $(document).ready(function(){
    		modalToggle();
    });
 
-   $("#editToggle").click(function (){
-         $("#modalTitle").html("Description");
-         $("#d-input").html($("#d-content").html());
-         $("#submit").html("Edit");
+   $("#addStudentToggle").click(function (){
+         $("#modalTitle").html("Add Student");
+         $("#submit").html("Add Student");
+         modalToggle();
+   });
+
+   $("#addClassToggle").click(function (){
+         $("#modalTitle").html("Add Class");
+         $("#submit").html("Add Class");
          modalToggle();
    });
 

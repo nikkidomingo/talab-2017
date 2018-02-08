@@ -33,7 +33,7 @@
 				
 				<div class="header-controls">
 					<div class="logout-container">
-						<button class="btn btn-green">+ Add Class</button>
+						<button id="addClassToggle" class="btn btn-green">+ Add Class</button>
 					</div>
 				</div>
 				
@@ -156,6 +156,53 @@
 				</tr>
 			</table>
 		</div>
+
+		<div id="modal" class="modal">
+		    <div class="container">
+		      	<div class="modal-content">
+		          	<h2 id="close" class="">&times;</h2>
+		          	<h3 id="modalTitle">Title</h3>
+		          	<form action="" method="post">
+			            <div>
+				            <label for="class_name">Name of Class</label>
+				            <input type="text" name="class_name">
+						</div>
+						<div>
+				            <label for="SDG">SDG</label>
+				            <input type="text" name="SDG">
+			            </div>
+			            <div> 
+			                <label for="num_slots">Number of Slots</label>
+			                <input type="text" name="num_slots">
+			            </div>
+			            <div>
+				            <label for="class_type">Class Type</label>
+				            <input type="text" name="class_type">
+						</div>
+						<div>
+				            <label for="speaker">Speaker</label>
+				            <input type="text" name="speaker">
+			            </div>
+			            <div> 
+			                <label for="date">Date</label>
+			                <input type="text" name="date">
+			            </div>
+			            <div>
+				            <label for="time">Time</label>
+				            <input type="text" name="start_time"> <p> to </p>
+				            <input type="text" name="end_time">
+						</div>
+						<div>
+				            <label for="venue">Venue</label>
+				            <input type="text" name="venue">
+			            </div>
+
+			            <button type="submit" class="btn-navy" id="submit"></button>
+		          	</form>
+		      	</div>
+		    </div>
+		</div>
+
     </body>
     <script>
 		document.getElementById('toggle-container').onclick = function() {
