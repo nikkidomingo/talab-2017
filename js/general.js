@@ -13,6 +13,12 @@ $(document).ready(function(){
          modalToggle();
    });
 
+   $("#editStudentToggle").click(function (){
+         $("#modalTitle").html("Edit Student");
+         $("#submit").html("Edit Student");
+         modalToggle();
+   });
+
    $("#addClassToggle").click(function (){
          $("#modalTitle").html("Add Class");
          $("#submit").html("Add Class");
