@@ -22,6 +22,10 @@ h1 {
 	font-weight: 700;
 }
 
+.close {
+	float:right;
+}
+
 .modal{
 	display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -37,6 +41,10 @@ h1 {
 
 .modal-content{
 	margin-top: 52.5px;
+	background-color: white;
+	width: 600px;
+	height: 400px;
+	align-items: center; /* doesn't center */
 }
 
 /*Buttons*/
