@@ -26,6 +26,12 @@ h1 {
 	float:right;
 }
 
+.modal-close {
+	float:right;
+	position:relative;
+	top:0;
+}
+
 .modal{
 	display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -37,14 +43,116 @@ h1 {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4);
     overflow-y: scroll;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-content{
 	margin-top: 52.5px;
 	background-color: white;
-	width: 600px;
-	height: 400px;
-	align-items: center; /* doesn't center */
+	border-radius: 5px;
+
+	width: 500px;
+	padding: 10px;
+
+	text-align: center;
+	vertical-align: center;
+}
+
+.modal-content h2 {
+	margin: 0;
+	text-align: left;
+}
+
+.modal-content h3 {
+	font-size: 18px;
+	text-align: center;
+}
+
+.modal-content form {
+	padding: 50px;
+	padding-top: 20px;
+}
+
+.modal-content .field {
+	margin-bottom: 20px;
+	text-align: left;
+	line-height: 30px;
+}
+
+.modal-content .field label,
+.modal-content .radio p {
+	font-weight: 800;
+	text-align: left;
+	margin:0;
+
+}
+
+.modal-content .field input {
+	border: 1px solid #34425b;
+	border-radius: 3px;
+}
+
+
+.modal-content .field input,
+.modal-content .radio-choices  {
+	width:  200px;
+	float:right;
+	padding: 5px 20px;
+
+	color: #34425b;
+}
+
+.modal-content .radio-choices {
+	padding: 5px; 
+	margin-top: -25px; /* this is cheating :( fix if have time*/
+}
+
+.modal-content .radio-choices input {
+	width: auto;
+	float: none;
+}
+
+.modal-content .radio-choices label {
+	font-weight: 400;
+}
+
+.modal-content .radio-choices .field {
+	margin-bottom: 5px;
+}
+
+.edit-students form p {
+	font-weight: 800;
+}
+
+.edit-students form .green {
+	color: #58d07d;
+}
+.edit-students form .red {
+	color: #ca3838;
+}
+
+.edit-students .radio p {
+	text-align: center;
+}
+
+.edit-students .radio-choices {
+	float: none;
+	margin-top: 0;
+	margin:auto;
+}
+
+.modal-content #submit {
+	padding:10px;
+	margin-top: 18px;
+	border: none;
+	border-radius: 5px;
+	font-size: 12px;
+	font-weight: 700;
+
+	text-transform: uppercase;
 }
 
 /*Buttons*/

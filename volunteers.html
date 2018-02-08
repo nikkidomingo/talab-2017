@@ -59,11 +59,6 @@
 						<a id="addVolToggle"><button class="btn btn-green">+ Add a Volunteer</button></a>
 					</div>
 				</div>
-				
-				<!-- <div class="error-message">
-					<span class="btn-close" onclick="this.parentElement.style.display='none';">&times;</span> 
-					<b>Oh no!</b> There are no more slots for this class. Please enlist in a different class.
-				</div> -->
 			</div>
 		</div>
 
@@ -183,21 +178,23 @@
 		<div id="modal" class="modal">
 		    <div class="container">
 		      	<div class="modal-content">
-		          	<h2 id="close" class="">&times;</h2>
-		          	<h3 id="modalTitle">Title</h3>
+		      		<h2 id="close" class="">&times;</h2>
+		          	<h3 id="modalTitle">Add a Volunteer</h3>
 		          	<form action="" method="post">
-			            <label for="class">Class</label>
-			            <input type="text" name="class" disabled placeholder="Sandiganbayan">
-
-			            <label for="id_number">ID Number</label>
-			            <input type="text" name="id_number">
-
-			            <div> 
+		          		<div class="field">
+				            <label for="class">Class</label>
+				            <input type="text" name="class" disabled placeholder="Sandiganbayan">
+			        	</div>
+						<div class="field">
+				            <label for="id_number">ID Number</label>
+				            <input type="text" name="id_number">
+						</div>
+			            <div class="field"> 
 			                <label for="hours" class="alt-label">No. of Hours</label>
 			                <input type="number" name="num_hours">
 			            </div>
-
-			            <button type="submit" class="btn-navy" id="submit"></button>
+						
+				            <button type="submit" class="btn-navy" id="submit">Add Volunteer</button>
 		          	</form>
 		      	</div>
 		    </div>

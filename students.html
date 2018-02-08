@@ -166,47 +166,96 @@
 		    <div class="container">
 		      	<div class="modal-content">
 		          	<h2 id="close" class="">&times;</h2>
-		          	<h3 id="modalTitle">Title</h3>
+		          	<h3 id="modalTitle">Add Student</h3>
 		          	<form action="" method="post">
-			            <div>
-			            <label for="id_number">ID Number</label>
-			            <input type="text" name="id_number">
+			            <div class="field">
+				            <label for="id_number">ID Number</label>
+				            <input type="text" name="id_number">
 						</div>
-						<div>
-			            <label for="student_name">Student Name</label>
-			            <input type="text" name="student_name">
+						<div class="field">
+				            <label for="student_name">Student Name</label>
+				            <input type="text" name="student_name">
 			            </div>
-			            <div> 
+			            <div class="field"> 
 			                <label for="year_course">Year and Course</label>
 			                <input type="text" name="year_course">
 			            </div>
 
-			            <button type="submit" class="btn-navy" id="submit"></button>
+			            <div class="radio"> 
+			                <p>Set Batch Number</p>
+			                <div class="radio-choices">
+			                	<div class="field">
+				                	<input type="radio" id="batch1" name="choice-batch-1" value="email">
+							    	<label for="choice-batch-1">1 (Feb 15, 8AM-10AM)</label>
+								</div>
+						
+
+							    <div class="field">
+							    	<input type="radio" id="choice-batch-2" name="batch" value="phone">
+							    	<label for="choice-batch-2">2 (Feb 15, 1PM-4PM)</label>
+								</div>
+								
+
+								<div class="field">
+							    	<input type="radio" id="choice-batch-3" name="batch" value="mail">
+							    	<label for="choice-batch-3">3 (Feb 15, 4PM-8PM)</label>
+								</div>
+
+								<div class="field">
+							    	<input type="radio" id="choice-batch-4" name="batch" value="mail">
+							    	<label for="choice-batch-4">4 (Feb 16, 8AM-10AM)</label>
+								</div>
+							</div>
+			            </div>
+
+			            <button type="submit" class="btn-navy" id="submit">Create Student</button>
 		          	</form>
 		      	</div>
 		    </div>
 		</div>
 
-		<div id="modal2" class="modal">
+		<div id="modal2" class="modal edit-students">
 		    <div class="container">
 		      	<div class="modal-content">
 		          	<h2 id="close" class="">&times;</h2>
-		          	<h3 id="modalTitle">Title</h3>
+		          	<h3 id="modalTitle ">ABAD, Jasmin Katy</h3>
+		          	<p>130445     IV AB Communications</p>
 		          	<form action="" method="post">
-			            <div>
-			            <label for="id_number">ID Number</label>
-			            <input type="text" name="id_number">
-						</div>
-						<div>
-			            <label for="student_name">Student Name</label>
-			            <input type="text" name="student_name">
-			            </div>
-			            <div> 
-			                <label for="year_course">Year and Course</label>
-			                <input type="text" name="year_course">
+			            <div class="radio"> 
+			                <p>Batch Number</p>
+			                <div class="radio-choices">
+			                	<div class="field">
+				                	<input type="radio" id="batch1" name="choice-batch-1" value="email">
+							    	<label for="choice-batch-1">1 (Feb 15, 8AM-10AM)</label>
+								</div>
+						
+
+							    <div class="field">
+							    	<input type="radio" id="choice-batch-2" name="batch" value="phone">
+							    	<label for="choice-batch-2">2 (Feb 15, 1PM-4PM)</label>
+								</div>
+								
+
+								<div class="field">
+							    	<input type="radio" id="choice-batch-3" name="batch" value="mail">
+							    	<label for="choice-batch-3">3 (Feb 15, 4PM-8PM)</label>
+								</div>
+
+								<div class="field">
+							    	<input type="radio" id="choice-batch-4" name="batch" value="mail">
+							    	<label for="choice-batch-4">4 (Feb 16, 8AM-10AM)</label>
+								</div>
+							</div>
 			            </div>
 
-			            <button type="submit" class="btn-navy" id="submit"></button>
+			            <p>Enlistment Status: <span class="red"> Not enlisted </span> </p>
+
+			            <div class="checkbox">
+			            	<input type="checkbox" id="reset-password" name="reset-password" value="mail">
+							<label for="reset-password">Reset Password</label>
+			            </div>
+
+			            <button type="submit" class="btn-navy" id="submit">Save Changes</button>
 		          	</form>
 		      	</div>
 		    </div>
