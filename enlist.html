@@ -12,13 +12,14 @@
     <body>
     	<header>
     		<div class="nav-container">
-    			<ul class="nav">
+    			<ul class="nav" id="nav">
     				<li id="nav-title"><a href="#">TALAB Enlistment System</a></li>
     				<div class="nav-links">
 	    				<li><a href="#">Enlist</a></li>
 	    				<li><a href="#">Change Password</a></li>
 	    				<li><a href="#">Enlistment Summary</a></li>
 	    				<li><a href="#">Log Out</a></li>
+	    				<li><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="toggleNav()">&#9776;</a></li>
     				</div>
     			</ul>
 			</div>
@@ -244,6 +245,15 @@
 		        arrow.style.transform= 'rotate(90deg)'
 		        table.style.marginBottom='0px';
 		    }
+		}
+
+		function toggleNav() {
+			var x = document.getElementById("nav");
+			if (x.className === "nav") {
+				x.className += " responsive";
+			} else {
+				x.className = "nav";
+			}
 		}
     </script>
 </html>
