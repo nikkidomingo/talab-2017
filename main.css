@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url("navbar.css");
 
 body,html{
     margin:0;
@@ -89,6 +90,7 @@ h1 {
 .checkbox-container {
 	display: inline-block;
 	padding-right: 10px;
+	line-height: 50px;
 }
 
 .logout-container {
@@ -171,68 +173,6 @@ th:first-child {
 	color: #4ccd73;
 	text-transform: uppercase;
 	font-size: 12px;
-}
-
-/* Navbar */
-
-.nav-container {
-    background: #34425b;
-    width: 100%;
-}
-
-.nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    padding: 0 10%;
-}
-
-#nav-title {
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.nav li {
-    overflow: hidden;
-}
-
-.nav li a {
-    display: block;
-    color: white;
-    padding: 14px 10px;
-    text-align: center;
-    text-decoration: none;
-}
-
-.nav li a:hover{
-    background: #34425b;
-    color: #99a0ad;
-}
-
-.nav .nav-links li{
-	display: none;
-	text-transform: uppercase;
-}
-
-/*Navbar toggle*/
-.nav .nav-links li:last-child,
-.nav .nav-links .responsive li:last-child {
-    float: right;
-    display: block;
-    position: absolute;
-	right: 0;
-	top: 0;
-}
-
-.nav.responsive {
-	position: relative;
-}
-
-.nav.responsive li {
-	float: none;
-	display: block;
-	text-align: left;
 }
 
 /*Footer*/
@@ -430,30 +370,6 @@ th:first-child {
 }
 
 @media all and (min-width: 1024px) {
-
-	.nav li {
-		display: block;
-		float: left;
-    	line-height:75px;
-	}
-
-	#nav-title {
-	    font-size: 20px;
-	}
-
-	.nav-links {
-		float: right;
-	}
-
-	.nav .nav-links li {
-		display:  block;
-	}
-
-	.nav .nav-links li:last-child{
-		display:none;
-	}
-
-
 	.header-title {
 		/*display:inline-block;*/
 		/*width:auto;*/

@@ -8,14 +8,43 @@
         <link rel="stylesheet" href="login.css">
 	</head>
 	<body>
-		<img src="talab_HR.png" alt="TALAB Logo">
-		<form action="">
-		 	<input type="text" name="id_number" placeholder="ID Number">
-			<input type="text" name="password" placeholder="Password">
-			<input type="submit" value="Log in">
-		</form>
-			<!-- For testing purposes -->
-			<a href="/talab-2017/enlist.html" style="color: #314467;">Skip login</a>
-			<a href="/talab-2017/changepassword.html" style="color: #314467;">Change password</a>
-	</body> 
+		<header>
+    		<div class="nav-container">
+    			<ul class="nav" id="nav">
+    				<li id="nav-title"><a href="#">TALAB Enlistment System</a></li>
+    				<div class="nav-links">
+	    				<li><a href="#">Enlist</a></li>
+	    				<li><a href="#">Change Password</a></li>
+	    				<li><a href="#">Enlistment Summary</a></li>
+	    				<li><a href="#">Log Out</a></li>
+	    				<li><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="toggleNav()">&#9776;</a></li>
+    				</div>
+    			</ul>
+			</div>
+    	</header>
+    	<div>
+    	<div class="content">
+			<div class="container">
+				<img src="talab_HR.png" alt="TALAB Logo">
+				<form action="">
+				 	<input type="text" name="id_number" placeholder="ID Number">
+					<input type="text" name="password" placeholder="Password">
+					<input type="submit" value="Log in">
+				</form>
+					<!-- For testing purposes -->
+					<!-- <a href="/talab-2017/enlist.html" style="color: #314467;">Skip login</a>
+					<a href="/talab-2017/changepassword.html" style="color: #314467;">Change password</a> -->
+			</div>
+		</div>
+	</body>
+	<script>
+		function toggleNav() {
+			var x = document.getElementById("nav");
+			if (x.className === "nav") {
+				x.className += " responsive";
+			} else {
+				x.className = "nav";
+			}
+		}
+	</script> 
 </html>

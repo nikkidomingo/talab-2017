@@ -9,32 +9,58 @@
         <link rel="stylesheet" href="login.css">
 	</head>
 	<body>
-		<div class="container">
-			<div class="header">
-				<div class="main-title">
-					<h1>Hi, Nikki.</h1>
-					You have enlisted in a total of <b>2 hours</b> of classes.
-				</div>
-
-				<div class="main-controls">
-					<button>Enlist in classes</button>
-					<button>Log out</button>
-				</div>
+		<header>
+    		<div class="nav-container">
+    			<ul class="nav" id="nav">
+    				<li id="nav-title"><a href="#">TALAB Enlistment System</a></li>
+    				<div class="nav-links">
+	    				<li><a href="#">Enlist</a></li>
+	    				<li><a href="#">Change Password</a></li>
+	    				<li><a href="#">Enlistment Summary</a></li>
+	    				<li><a href="#">Log Out</a></li>
+	    				<li><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="toggleNav()">&#9776;</a></li>
+    				</div>
+    			</ul>
 			</div>
+    	</header>
+    	<div class="content">
+			<div class="container">
+				<div class="header">
+					<div class="main-title">
+						<h1>Hi, Nikki.</h1>
+						You have enlisted in a total of <b>2 hours</b> of classes.
+					</div>
 
-			<div class="class-list">
-				<h2>Your enlisted classes</h2>
-				<div class="enlisted-class">
-					<h3>Design for a Better PH: Design Thinking in the Government 101</h3>
-					Talk by Leni Robredo <br />
-					12 Sep 8:00-10:00 AM<br />
+					<div class="main-controls">
+						<button>Enlist in classes</button>
+						<button>Log out</button>
+					</div>
 				</div>
-				<div class="enlisted-class">
-					<h3>Design for a Better PH: Design Thinking in the Government 101</h3>
-					Talk by Leni Robredo <br />
-					12 Sep 8:00-10:00 AM<br />
+
+				<div class="class-list">
+					<h2>Your enlisted classes</h2>
+					<div class="enlisted-class">
+						<h3>Design for a Better PH: Design Thinking in the Government 101</h3>
+						Talk by Leni Robredo <br />
+						12 Sep 8:00-10:00 AM<br />
+					</div>
+					<div class="enlisted-class">
+						<h3>Design for a Better PH: Design Thinking in the Government 101</h3>
+						Talk by Leni Robredo <br />
+						12 Sep 8:00-10:00 AM<br />
+					</div>
 				</div>
 			</div>
 		</div>
 	</body> 
+	<script>
+		function toggleNav() {
+			var x = document.getElementById("nav");
+			if (x.className === "nav") {
+				x.className += " responsive";
+			} else {
+				x.className = "nav";
+			}
+		}
+	</script>
 </html>
