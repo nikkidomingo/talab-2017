@@ -26,15 +26,14 @@
     	<div class="content">
 			<div class="container">
 				<center><img src="talab_HR.png" alt="TALAB Logo"></center>
-				<div>
-					<div class="error-message" id="error-message">
+					<center><div class="error-message" id="error-message">
 						<span class="btn-close" onclick="this.parentElement.style.display='none';">&times;</span> 
-							<span id="error-text">Sorry, you can't sign in right now, The batching system is currently being implemented.</span>
-					</div>
-					<div class="notification-message" id="notification-message" style="display: none;">
+							<span id="error-text">Your username and/or password is incorrect. </span>
+					</div></center>
+					<center><div class="notification-message" id="notification-message" style="display: none;">
 						<span class="btn-close" onclick="this.parentElement.style.display='none';">&times;</span> 
 						<span id="notification-text"></span>
-					</div>
+					</div></center>
 					<form action="" id="form" method="POST">
 						<input type="text" name="id_number" id="id_number" placeholder="ID Number" autofocus>
 						<input type="password" name="password" id="password" placeholder="Password">

@@ -139,23 +139,23 @@ button {
 }
 
 .error-message {
-	width:80%;
+	display:inline-block;
 	max-width: 400px;
 	margin:auto;
 	background-color: #F3DCDC;
 	color: #AC4168;
-	padding:5%;
+	padding:20px;
 	margin-bottom: 30px;
 	border-radius: 10px;
 }
 
 .notification-message { /*lol change colors pls*/
-	width:80%;
+	display:inline-block;
 	max-width: 400px;	
 	margin:auto;
 	background-color: #D9F6D7;
 	color: #2D8F81;
-	padding:5%;
+	padding:20px;
 	margin-bottom:30px;
 	border-radius: 10px;
 }
