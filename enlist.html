@@ -225,6 +225,9 @@
 		</div>
     </body>
     <script>
+    	
+    	window.onload = function() { document.getElementById('table').style.marginBottom= document.getElementById('enlist-container').scrollHeight+30+"px";};
+
 		document.getElementById('toggle-container').onclick = function() {
 		    var container = document.getElementById('enlist-container');
 		    var title = document.getElementById('toggle-title');

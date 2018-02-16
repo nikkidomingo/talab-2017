@@ -189,7 +189,7 @@ th:first-child {
 .enlist-summary {
 	width:100%;
 	position: fixed;
-	bottom:0%;
+	bottom:0;
 	background-color: #33415b;
 	/*height:0;*/
 	overflow: hidden;
