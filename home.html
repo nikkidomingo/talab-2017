@@ -17,7 +17,7 @@
 	    				<li><a href="#">Enlist</a></li>
 	    				<li><a href="#">Change Password</a></li>
 	    				<li><a href="#">Enlistment Summary</a></li>
-	    				<li><a href="#">Log Out</a></li>
+	    				<li><span class="btn-logout"><a id="logout" href="#">Log Out</a></span></li>
 	    				<li><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="toggleNav()">&#9776;</a></li>
     				</div>
     			</ul>
@@ -27,30 +27,36 @@
 			<div class="container">
 				<div class="header">
 					<div class="main-title">
-						<h1>Hi, Nikki.</h1>
-						You have enlisted in a total of <b>2 hours</b> of classes.
+						<h1>Hi<span id="name">, Nikki</span>.</h1>
+						You have enlisted in a total of <b id="total-time">0 hours</b> of classes.
 					</div>
-
-					<div class="main-controls">
-						<button>Enlist in classes</button>
-						<button>Log out</button>
-					</div>
+					
 				</div>
+				
+				<div class="class-list" id="class-list">
 
-				<div class="class-list">
 					<h2>Your enlisted classes</h2>
 					<div class="enlisted-class">
-						<h3>Design for a Better PH: Design Thinking in the Government 101</h3>
+						<h3>Design for a Better PH</h3>
 						Talk by Leni Robredo <br />
 						12 Sep 8:00-10:00 AM<br />
 					</div>
-					<div class="enlisted-class">
-						<h3>Design for a Better PH: Design Thinking in the Government 101</h3>
-						Talk by Leni Robredo <br />
-						12 Sep 8:00-10:00 AM<br />
+					
+					<div class="error-message" id="error-message" style="display: none;">
+						<span class="btn-close" onclick="this.parentElement.style.display='none';">&times;</span> 
+						<span id="error-text"></span>
 					</div>
-				</div>
+
+				</div>				
 			</div>
+			<div class="footer">
+				Brought to you by:
+				<br>
+				<div class="logos">
+					<img class="compsat" src="compsat.svg" alt="CompSAt Logo">
+					<img class="uxsoc" src="uxsoc.png" alt="UXSoc Logo">
+				</div>
+			</div>				
 		</div>
 	</body> 
 	<script>
