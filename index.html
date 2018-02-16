@@ -25,12 +25,27 @@
     	<div>
     	<div class="content">
 			<div class="container">
-				<img src="talab_HR.png" alt="TALAB Logo">
-				<form action="">
-				 	<input type="text" name="id_number" placeholder="ID Number">
-					<input type="text" name="password" placeholder="Password">
-					<input type="submit" value="Log in">
-				</form>
+				<center><img src="talab_HR.png" alt="TALAB Logo"></center>
+				<div>
+					<div class="error-message" id="error-message">
+						<span class="btn-close" onclick="this.parentElement.style.display='none';">&times;</span> 
+							<span id="error-text">Sorry, you can't sign in right now, The batching system is currently being implemented.</span>
+					</div>
+					<div class="notification-message" id="notification-message" style="display: none;">
+						<span class="btn-close" onclick="this.parentElement.style.display='none';">&times;</span> 
+						<span id="notification-text"></span>
+					</div>
+					<form action="" id="form" method="POST">
+						<input type="text" name="id_number" id="id_number" placeholder="ID Number" autofocus>
+						<input type="password" name="password" id="password" placeholder="Password">
+						<input type="submit" id="btn" value="Log in">
+					</form>
+				</div>
+				<span class="login-links"><a href="" style="color: #314467;"><b>What are my credentials?</b></a></span>
+				<div style="line-height:45%;">
+					<br>
+				</div>
+				<span class="login-links"><a href="" style="color: #314467;">Browse available classes</a></span>
 					<!-- For testing purposes -->
 					<!-- <a href="/talab-2017/enlist.html" style="color: #314467;">Skip login</a>
 					<a href="/talab-2017/changepassword.html" style="color: #314467;">Change password</a> -->

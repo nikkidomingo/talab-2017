@@ -4,10 +4,6 @@
 body,html{
     margin: 0;
     padding: 0;
-    /*display: flex;*/
-/*  	align-items: center;
-  	justify-content: center;
-  	flex-direction: column;*/
 }
 
 body {
@@ -29,14 +25,15 @@ form {
 }
 
 input[type="text"],
+input[type="password"],
 input[type="submit"] {
 	display: block;
 	width: 300px;
 	height: 40px;
-	margin: auto;
 	font-size: 12px;
 	font-family: 'Roboto', sans-serif;
     padding:0 20px;
+    margin:auto;
     margin-bottom: 5px;
     border-radius: 3px;
     border: 1px solid white
@@ -56,15 +53,20 @@ input[type="submit"]:hover {
 	color: #ffffff;
 }
 
+.buttons-container {
+	display: flex;
+	flex-direction: row;
+	width: 300px;
+	margin: auto;
+}
+
+.buttons-container input[type="submit"] {
+	width:100%;
+}
+
 p {
 	margin-bottom: 30px
 }
-
-/*Navbar modifications*/
-/*.nav-container {
-	position: absolute;
-}
-*/
 
 /*Home page*/
 
@@ -140,8 +142,69 @@ button {
 	border:none;
 }
 
-@media all and (min-width: 768px) {
+.error-message {
+	width:80%;
+	margin:auto;
+	background-color: #F3DCDC;
+	color: #AC4168;
+	padding:5%;
+	margin-bottom: 30px;
+	border-radius: 10px;
+}
 
+.notification-message { /*lol change colors pls*/
+	width:80%;
+	margin:auto;
+	background-color: #D9F6D7;
+	color: #2D8F81;
+	padding:5%;
+	margin-bottom:30px;
+	border-radius: 10px;
+}
+
+.login-links {
+	text-align: center;
+	display:inherit;
+}
+
+.btn-close {
+    margin-left: 15px;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer {
+	width:80%;
+	bottom:0;
+
+	margin:20px 0px;
+}
+
+.logos {
+	margin-top: 10px;
+}
+
+.logos .uxsoc {
+	max-width: 75px;
+	/*padding:0 10px 0 50px;*/
+}
+.logos .compsat {
+	max-width: 150px;
+}
+
+@media all and (min-height: 668px){
+	.footer {
+		width:80%;
+		position:fixed;
+	}
+
+}
+
+@media all and (min-width: 768px) {
 	.header {
 		flex-direction: row;
 	}
@@ -149,6 +212,50 @@ button {
 	.main-title,
 	.main-controls {
 		width:50%;
+	}
+
+	.main-title span {
+		display:inline-block;
+	}
+	
+/*	.main-title {
+		margin: 15px 0;
+		flex:2;
+	}
+
+	.main-controls {
+		display: flex;
+		flex-direction: column;
+		flex: 3;
+		align-items: flex-end;
+		justify-content: center;
+	}*/
+
+	span {
+		display: flex;
+		flex-direction: row;
+		margin: 3px 0;
+	}
+
+	.footer {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		position:fixed;
+		width: 100%;
+	}
+
+	.logos {
+		margin: 0px;
+		margin-left:50px;
+	}
+
+	.logos .uxsoc {
+		max-width: 75px;
+	}
+	.logos .compsat {
+		max-width: 150px;
 	}
 
 }

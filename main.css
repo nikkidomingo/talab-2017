@@ -90,7 +90,6 @@ h1 {
 .checkbox-container {
 	display: inline-block;
 	padding-right: 10px;
-	line-height: 50px;
 }
 
 .logout-container {
@@ -103,6 +102,16 @@ h1 {
 	margin:auto;
 	background-color: #F3DCDC;
 	color: #AC4168;
+	padding:20px;
+	margin-top:30px;
+	border-radius: 10px;
+}
+
+.notification-message {
+	width:90%;
+	margin:auto;
+	background-color: #D9F6D7;
+ 	color: #2D8F81;
 	padding:20px;
 	margin-top:30px;
 	border-radius: 10px;
@@ -151,14 +160,14 @@ tr:nth-child(odd) {
 	background: #f8feff;
 }
 
-td:last-child { 
-	text-align: center;
-	padding:25px 20px;
+th:last-child,
+td:last-child {
+	display: none;
 }
 
 td:first-child,
 th:first-child {
-	padding-left: 50px;
+	padding-left: 25px;
 }
 
 .msg-error {
@@ -370,6 +379,11 @@ th:first-child {
 }
 
 @media all and (min-width: 1024px) {
+	
+	.nav-container {
+		position: relative;
+	}
+
 	.header-title {
 		/*display:inline-block;*/
 		/*width:auto;*/
