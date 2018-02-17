@@ -14,15 +14,16 @@
     <body>
     	<header>
     		<div class="nav-container">
-    			<ul class="nav-links">
-    				<li id="nav-title"><a href="#">Admin Page</a></li>
-    				<div style="float:right">
-	    				<li><a href="#">CLASSES</a></li>
-	    				<li><a href="#">STUDENTS</a></li>
-	    				<li><a href="#">ENLISTMENT</a></li>
-	    				<li><a href="#">LOG OUT</a></li>
-    				</div>
-    			</ul>
+				<ul class="nav" id="nav">
+					<li id="nav-title"><a href="#">TALAB Enlistment System</a></li>
+					<div class="nav-links">
+						<li><a href="/enlist">Enlist</a></li>
+						<li><a href="/changepassword">Change Password</a></li>
+						<li><a href="/home">Enlistment Summary</a></li>
+						<li><span class="btn-logout"><a id="logout" href="#">Log Out</a></span></li>
+						<li><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="toggleNav()">&#9776;</a></li>
+					</div>
+				</ul>
 			</div>
     	</header>
     	<div class="header-container">
@@ -157,7 +158,7 @@
 			</table>
 		</div>
 
-		<!-- <div id="modal" class="modal add-class">
+		<div id="modal" class="modal add-class">
 		    <div class="container">
 		      	<div class="modal-content">
 		          	<h2 id="close" class="">&times;</h2>
@@ -202,7 +203,7 @@
 		          	</form>
 		      	</div>
 		    </div>
-		</div> -->
+		</div>
 
 		<!-- <div id="modal" class="modal status-enlistment">
 		    <div class="container">

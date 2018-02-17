@@ -1,0 +1,122 @@
+/* Navbar */
+
+.nav-container {
+    background: #34425b;
+    width: 100%;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding: 0 10%;
+}
+
+#nav-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav li {
+    overflow: hidden;
+}
+
+.nav li a {
+    display: block;
+    color: white;
+    padding: 14px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav li a:hover{
+    background: #34425b;
+    color: #99a0ad;
+}
+
+.nav .nav-links li{
+	display: none;
+	text-transform: uppercase;
+}
+
+.nav .nav-links .btn-logout a{
+    line-height: 15px;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #314467;
+    background-color: #ffffff;
+    margin-top: 17px;
+    margin-left: 10px;
+    border-radius: 3px;
+	margin-bottom: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.nav .nav-links .btn-login a{
+    line-height: 15px;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #314467;
+    background-color: #ffffff;
+    margin-top: 17px;
+    margin-left: 10px;
+    border-radius: 3px;
+	margin-bottom: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/*Navbar toggle*/
+.nav .nav-links li:last-child,
+.nav .nav-links .responsive li:last-child {
+    float: right;
+    display: block;
+    position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.nav.responsive {
+	position: relative;
+}
+
+.nav.responsive li {
+	float: none;
+	display: block;
+	text-align: left;
+}
+
+@media all and (min-width: 1024px) {
+	
+	.nav-container {
+		position: absolute;
+	}
+
+    .nav li {
+        display: block;
+        float: left;
+        line-height:50px;
+    }
+
+    #nav-title {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        float: right;
+    }
+
+    .nav .nav-links li {
+        display:  block;
+    }
+
+    .nav .nav-links li:last-child{
+        display:none;
+    }
+}

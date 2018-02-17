@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url("navbar.css");
 
 body,html{
     margin:0;
@@ -21,6 +22,8 @@ h1 {
 	color: #314467;
 	font-weight: 700;
 }
+
+/*Modal*/
 
 .close {
 	float:right;
@@ -93,6 +96,7 @@ h1 {
 .modal-content .field input {
 	border: 1px solid #34425b;
 	border-radius: 3px;
+	font-family: "Roboto", sans-serif;
 }
 
 
@@ -145,16 +149,17 @@ h1 {
 }
 
 .add-class .time input {
-	width: 54px;
+	width: 77px;
+	padding: 5px 10px;
 	float: none;
 }
 
 .add-class .time span {
-	margin: 0 15px;
+	margin: 0 10px;
 }
 
 .add-class .time label {
-	margin-right: 122px;
+	margin-right: 115px;
 }
 
 
@@ -252,12 +257,11 @@ h1 {
 	margin-left: 15px;
 }
 
-
-
 /*Header*/
 
 .header-container {
 	padding: 30px 0;
+	vertical-align: center;
 }
 
 .header-wrapper {
@@ -288,9 +292,10 @@ h1 {
 }
 
 .header-title {
-	display:inline-block;
-	width:100%;
+	width:90%;
+	text-align: center;
 	margin:auto;
+	margin-top: 50px;
 }
 
 .header-batch {
@@ -301,19 +306,26 @@ h1 {
 
 .header-controls {
 	width:100%;
-	padding-top:20px;
+	/*padding-top:20px;*/
+	text-align: center;
+}
+.search-bar-container input {
+	border: none;
+	border-radius: 3px;
+	font-size: 16px;
+	min-width: 275px;
+	padding: 15px;
 }
 
 .checkbox-container {
 	display: inline-block;
-	padding-right: 10px;
+	/*padding-right: 10px;*/
 }
+
 
 .logout-container {
 	display: inline-block;
-	position:absolute;
-	right:10%;
-	vertical-align:middle;
+	margin-top:10px;
 }
 
 .error-message {
@@ -321,6 +333,16 @@ h1 {
 	margin:auto;
 	background-color: #F3DCDC;
 	color: #AC4168;
+	padding:20px;
+	margin-top:30px;
+	border-radius: 10px;
+}
+
+.notification-message {
+	width:90%;
+	margin:auto;
+	background-color: #D9F6D7;
+ 	color: #2D8F81;
 	padding:20px;
 	margin-top:30px;
 	border-radius: 10px;
@@ -369,23 +391,14 @@ tr:nth-child(odd) {
 	background: #f8feff;
 }
 
-td:first-child,
-th:first-child  { 
-	text-align: center;
-	padding:25px 20px;
-}
-
-td:nth-child(2){
-	max-width: 300px;
-}
-
-td:nth-child(9){
-	text-align: center;
-}
-
 th:last-child,
 td:last-child {
 	display: none;
+}
+
+td:first-child,
+th:first-child {
+	padding-left: 25px;
 }
 
 .msg-error {
@@ -400,50 +413,6 @@ td:last-child {
 	color: #4ccd73;
 	text-transform: uppercase;
 	font-size: 12px;
-}
-
-/* Nav */
-.nav-container {
-    background: #34425b;
-}
-
-.nav-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    padding: 0 10%;
-}
-
-.nav-links li {
-    float: left;
-    line-height:75px;
-}
-
-#nav-title {
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.nav-links li a {
-    display: block;
-    color: white;
-    padding: 14px 22px;
-    text-align: center;
-    text-decoration: none;
-}
-
-.nav-links li:first-child a{
-    padding-left: 0;
-}
-
-.nav-links li:last-child a{
-    padding-right: 0;
-}
-
-.nav-links li a:hover{
-    background: #34425b;
-    color: #99a0ad;
 }
 
 /*Footer*/
@@ -510,6 +479,19 @@ td:last-child {
 	margin-top: 0;
 }
 
+.enlisted-class h2 .volunteer-tag {
+	display: inline-block;
+	padding: 3px 5px;
+	border-radius: 3px; 
+
+	font-size: 8px;
+	font-weight: 400;
+	text-transform: uppercase;
+
+	background-color: #ca3838;
+	color: #ffffff;
+}
+
 .enlisted-class a {
 	display: block;
 	margin-top:10px;
@@ -557,7 +539,7 @@ td:last-child {
 
 @media all and (min-width: 426px) {
 	.header-container {
-		width:100%; /*changed*/
+		width:80%;
 		margin:auto;
 		vertical-align: center;
 	}
@@ -602,6 +584,12 @@ td:last-child {
 	#enlist-container {
 		display:flex;
 		flex-direction: row;
+		height: auto;
+		margin-top: 20px;
+	}
+
+	#toggle-title {
+		display: none;
 	}
 
 	.enlist-desc {
@@ -622,16 +610,31 @@ td:last-child {
 }
 
 @media all and (min-width: 1024px) {
+	
+	.nav-container {
+		position: relative;
+	}
+
 	.header-title {
-		display:inline-block;
-		width:auto;
+		/*display:inline-block;*/
+		/*width:auto;*/
 	}
 
 	.header-controls {
-		display: inline-block;
+/*		display: inline-block;
 		float: right;
-		width:auto;
+		width:auto;*/
+		text-align: right;
 		padding-top: 0px;
+	}
+
+	.header-controls .search-bar-container {
+		display: inline-block;
+	}
+
+	.header-controls .checkbox-container {
+		display:inline-block;
+		text-align: right;
 	}
 
 	.enlistment-body {
